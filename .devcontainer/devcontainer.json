@@ -25,7 +25,7 @@
 
   "customizations": {
     "codespaces": {
-      "openFiles": ["src/pages/index.astro"]
+      "openFiles": ["src/pages/Index.astro"]
     },
     "vscode": {
       "extensions": ["astro-build.astro-vscode", "esbenp.prettier-vscode"]

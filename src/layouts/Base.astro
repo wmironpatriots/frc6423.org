@@ -1,0 +1,36 @@
+---
+import '../styles/global.css';
+import NavigationBar from '../components/NavigationBar.astro';
+
+const { title } = Astro.props;
+---
+
+<!-- Note: homepage will need to be structured differently from other pages most likely -->
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/png" href="src/assets/favicon.png?" />
+		<meta name="generator" content={Astro.generator} />
+		
+		<!-- Font preloads -->
+		<link rel="preload" href="/fonts/Montserrat-Regular.woff" as="font" type="font/woff" crossorigin />
+		<link rel="preload" href="/fonts/Montserrat-Bold.woff" as="font" type="font/woff" crossorigin />
+		<title>{ title } FRC 6423</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		font-family: "Montserrat", sans-serif;
+	}
+</style>
