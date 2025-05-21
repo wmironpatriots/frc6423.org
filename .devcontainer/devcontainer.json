@@ -1,34 +1,19 @@
 {
-  "name": "Basics",
-  "build": {
-    "dockerfile": "../examples.Dockerfile"
-  },
-
-  "workspaceFolder": "/workspaces/astro/examples/basics",
-
-  "portsAttributes": {
-    "4321": {
-      "label": "Application",
-      "onAutoForward": "openPreview"
-    }
-  },
-
-  "forwardPorts": [4321],
-
-  "postCreateCommand": "pnpm install && cd /workspaces/astro && pnpm run build",
-
-  "waitFor": "postCreateCommand",
-
-  "postAttachCommand": {
-    "Server": "pnpm start --host"
-  },
-
-  "customizations": {
-    "codespaces": {
-      "openFiles": ["src/pages/Index.astro"]
+    "name": "Node.js & TypeScript",
+    "image": "mcr.microsoft.com/devcontainers/typescript-node:1-20-bullseye",
+    "forwardPorts": [4321],
+    "portsAttributes": {
+        "4321": {
+            "label": "Astro",
+            "onAutoForward": "openBrowser"
+        }
     },
-    "vscode": {
-      "extensions": ["astro-build.astro-vscode", "esbenp.prettier-vscode"]
+    "postCreateCommand": "pnpm config set store-dir /home/node/.local/share/pnpm/store && pnpm install --frozen-lockfile",
+    "postStartCommand": "nohup bash -c 'pnpm run dev &'",
+    "remoteUser": "node",
+    "customizations": {
+        "vscode": {
+            "extensions": ["astro-build.astro-vscode"]
+        }
     }
-  }
 }
