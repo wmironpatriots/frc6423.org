@@ -1,7 +1,176 @@
 ---
 import Base from '../layouts/Base.astro';
+import FooterIcons from '../components/FooterIcons.astro';
 ---
 
 <Base>
-	<h1>frc 6423 wowzers</h1>
+	<div class="home-page-collection">
+		<div class="home-page__gallery"> <!-- make into interactive island - gallery image -->
+			<img src="src/assets/HVR-1.png" alt="Robot"/>
+		</div>
+
+		<div class="home-page__content">
+			<img class="logo" width="90" height="90" src="src/assets/logo.png" alt="Logo"/>
+			<div>
+				<header>
+					<div class="home-page__content__header">
+						<div class="title-header">
+							<h2>THE WARD MELVILLE</h2>
+							<h1>IRON PATRIOTS</h1>
+						</div>
+						<h3>Design. Build. Compete. Inspire.</h3>
+					</div>
+				</header>
+
+				<nav>
+					<div class="home-page__content__navigation">
+						<a href="/about">ABOUT</a>
+						<a href="/updates">UPDATES</a>
+						<a href="/sponsors">SPONSORS</a>
+						<a href="/outreach">OUTREACH</a>
+						<a href="/robots">ROBOTS</a>
+						<a href="/contact">CONTACT</a>
+					</div>
+				</nav>
+			</div>
+
+			<footer>
+				<div class="home-page__content__footer">
+					<FooterIcons />
+				</div>
+			</footer>
+		</div>
+	</div>
 </Base>
+
+<style>
+	.home-page-collection {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		height: 100%;
+		background: url("src/assets/background.png");
+	}
+
+	/*
+	* 
+	* Splits home screen page into 50-50 and wraps
+	*
+	*/
+	.home-page-collection > * { 
+		flex-grow: 1;
+		flex-basis: 50%;
+	}
+
+	/*
+	*
+	* Content
+	*
+	*/
+	.home-page__content {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	.home-page__content .logo {
+		padding-left: 7%;
+		padding-top: 5%;
+	}
+
+	/*
+	*
+	* Header for Homepage
+	*
+	*/
+
+	.home-page__content__header {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+		padding-left: 7%;
+	}
+
+	.title-header h2 {
+		font-size: 200%;
+		margin-bottom: 0;
+		margin-top: 0;
+		padding: 0;
+		font-weight: normal;
+	}
+
+	.title-header h1 {
+		font-size: 500%;
+		font-weight: bolder;
+		margin-top: 0;
+		margin-bottom: 0;
+		padding: 0;
+	}
+
+	/*
+	*
+	* Navigation Bar for Homepage
+	*
+	*/
+
+	.home-page__content__navigation {
+		display: flex;
+		justify-content: left;
+		align-items: center;
+		flex-direction: row;
+		column-gap: 5%;
+		padding-left: 7%;
+		margin-top: 7%;
+		flex-wrap: wrap;
+	}
+
+	.home-page__content__navigation a {
+		text-decoration: none;
+		color: #FFF;
+		opacity: 1;
+		transition: 0.4s;
+	}
+
+	.home-page__content__navigation a:hover {
+		opacity: 0.6;
+		cursor: pointer;
+	}
+
+	/*
+	*
+	* Footer Bar for Homepage
+	*
+	*/
+
+	.home-page__content__footer {
+		display: flex;
+		justify-content: left;
+		align-items: center;
+		flex-direction: row;
+		padding-left: 7%;
+		padding-bottom: 7%;
+		gap: 3%;
+		flex-wrap: wrap;
+	}
+
+	/*
+	*
+	* Gallery (using a single image for substitute right now)
+	*
+	*/
+	.home-page__gallery {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.home-page__gallery img {
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+	}
+</style>
