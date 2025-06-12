@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import FooterIcons from '../components/FooterIcons.astro';
+import Footer from '../components/Footer.astro';
 ---
 
 <Base>
@@ -36,7 +36,7 @@ import FooterIcons from '../components/FooterIcons.astro';
 
 			<footer>
 				<div class="home-page__content__footer">
-					<FooterIcons />
+					<Footer />
 				</div>
 			</footer>
 		</div>
@@ -51,7 +51,6 @@ import FooterIcons from '../components/FooterIcons.astro';
 		align-items: center;
 		flex-wrap: wrap;
 		height: 100%;
-		background: url("src/assets/background.png");
 	}
 
 	/*
@@ -110,6 +109,10 @@ import FooterIcons from '../components/FooterIcons.astro';
 		padding: 0;
 	}
 
+	h3 {
+		margin-top: 0;
+	}
+
 	/*
 	*
 	* Navigation Bar for Homepage
@@ -154,6 +157,7 @@ import FooterIcons from '../components/FooterIcons.astro';
 		padding-bottom: 7%;
 		gap: 3%;
 		flex-wrap: wrap;
+		text-align: left;
 	}
 
 	/*

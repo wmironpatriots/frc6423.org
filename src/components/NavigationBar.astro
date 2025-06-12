@@ -1,11 +1,42 @@
 ---
 import '../styles/global.css';
+
+const { current, blog } = Astro.props;
 ---
 
 <!-- SELF-NOTE: navigation bar on home page and other pages will most likely differ -->
 
-<nav>
-  <div>
-    
-  </div>
-</nav>
+<div class="nav">
+  <a class="logo" href="/"><img src={blog === "true" ? "../src/assets/logo.png":"src/assets/logo.png"} alt="logo" width="80" height="80"/></a>
+  <a href="/" class={current === "home" ? "selected" : ""}>HOME</a>
+  <a href="/about" class={current === "about" ? "selected" : ""}>ABOUT</a>
+	<a href="/updates" class={current === "updates" ? "selected" : ""}>UPDATES</a>
+	<a href="/sponsors" class={current === "sponsors" ? "selected" : ""}>SPONSORS</a>
+	<a href="/outreach" class={current === "outreach" ? "selected" : ""}>OUTREACH</a>
+	<a href="/robots" class={current === "robots" ? "selected" : ""}>ROBOTS</a>
+	<a href="/contact" class={current === "contact" ? "selected" : ""}>CONTACT</a>
+</div>
+
+<style>
+  .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1em;
+  }
+
+  .nav .logo:hover {
+    transform: none;
+  }
+
+  .nav a {
+    transition: 0.25s;
+  }
+  
+  .nav a:hover {
+    transform: translatex(0.6rem);
+  }
+
+  .selected {
+    color: #00a359;
+  }
+</style>

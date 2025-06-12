@@ -6,5 +6,61 @@ body {
 	width: 100%;
 	height: 100%;
 	font-family: "Montserrat", sans-serif;
+	font-size: 105%;
   color: #FFF;
+	background: url('/src/assets/background.png');
+	scroll-behavior: smooth;
+	min-height: 100vh;
+}
+
+a {
+	color: #FFF;
+	transition: 0.5s;
+}
+
+a:hover {
+	color: #a0a0a0;
+}
+
+article {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+
+.page-collection {
+	display: flex;
+	padding: 2em;
+	flex-grow: 1;
+	flex-shrink: 0;
+}
+
+.page-collection nav {
+	display: flex;
+	padding-right: 2em;
+	border-right: 1px solid #FFF;
+}
+
+.page-collection main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 1 0 auto;
+	margin-top: 3em;
+	padding-left: 3em;
+	padding-right: 3em;
+	margin-left: 2em;
+	margin-right: 2em;
+	text-wrap: wrap;
+	overflow: hidden;
+}
+
+footer {
+	padding-top: 1em;
+	text-align: center;
+	bottom: 0;
+	flex-shrink: 0;
+	padding-bottom: 1em;
+	font-size: 70%;
 }
