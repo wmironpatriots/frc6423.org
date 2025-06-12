@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import Footer from '../components/Footer.astro';
+import HomeFooter from '../components/HomeFooter.astro';
 ---
 
 <Base>
@@ -36,7 +36,7 @@ import Footer from '../components/Footer.astro';
 
 			<footer>
 				<div class="home-page__content__footer">
-					<Footer />
+					<HomeFooter />
 				</div>
 			</footer>
 		</div>
@@ -150,14 +150,8 @@ import Footer from '../components/Footer.astro';
 
 	.home-page__content__footer {
 		display: flex;
-		justify-content: left;
-		align-items: center;
-		flex-direction: row;
 		padding-left: 7%;
 		padding-bottom: 7%;
-		gap: 3%;
-		flex-wrap: wrap;
-		text-align: left;
 	}
 
 	/*

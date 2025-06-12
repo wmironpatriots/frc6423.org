@@ -1,0 +1,41 @@
+---
+import '../styles/global.css';
+
+const { blog } = Astro.props;
+---
+
+<div class="footer">
+	<span>
+		&copy; 2025-2026 Ward Melville Iron Patriots
+	</span>
+	<div>
+		<a href="https://www.instagram.com/frc6423/"><img width="40" height="40" src={blog === "true" ? "../src/assets/instagram.png":"src/assets/instagram.png"} alt="Instagram"/></a>
+		<a href="https://www.youtube.com/@IronPatriotsFRC6423"><img width="40" height="40" src={blog === "true" ? "../src/assets/youtube.png":"src/assets/youtube.png"} alt="YouTube"/></a>
+		<a href="https://github.com/wmironpatriots"><img width="40" height="40" src={blog === "true" ? "../src/assets/github.png":"src/assets/github.png"} alt="GitHub"/></a>
+		<a href="https://www.chiefdelphi.com/t/6423-iron-patriots-2040-reefscape-build-thread/477430"><img width="40" height="40" src={blog === "true" ? "../src/assets/chiefdelphi.png":"src/assets/chiefdelphi.png"} alt="ChiefDelphi"/></a>
+	</div>
+</div>
+
+<style>
+	.footer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 0.7em;
+	}
+
+	.footer div {
+		width: 100%;
+		display: flex;
+		gap: 0.3em;
+	}
+
+  img {
+		transition: 0.15s;
+	}
+
+	img:hover {
+		cursor: pointer;
+		transform: scale(1.2);
+	}
+</style>
