@@ -38,6 +38,14 @@ article {
 	white-space: nowrap;
 }
 
+.page-collection h1 {
+	font-size: 400%;
+}
+
+.page-collection h2 {
+	font-size: 160%;
+}
+
 .page-collection nav {
 	display: flex;
 	padding-right: 2em;

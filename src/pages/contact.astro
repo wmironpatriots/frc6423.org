@@ -1,7 +1,27 @@
 ---
 import Base from '../layouts/Base.astro';
+import Footer from '../components/Footer.astro';
+import NavigationBar from '../components/NavigationBar.astro';
+
+const title = "Contact |";
+const current = "contact";
 ---
 
-<Base title="Contact | ">
-	<h1>contact - frc 6423 wowzers</h1>
+<Base title={title}>
+	<article>
+		<div class="page-collection">
+			<nav>
+				<NavigationBar current={current} />
+			</nav>
+
+			<main>
+				<header>
+					<h1>Contact</h1>
+				</header>
+			</main>
+		</div>
+		<footer>
+			<Footer />
+		</footer>
+	</article>
 </Base>
