@@ -23,6 +23,7 @@ allPosts = allPosts.sort((a, b) => new Date(b.data.publishDate).valueOf() - new 
 				<header>
 					<h1>Updates</h1>
 				</header>
+				
 				<div class="main">
 					{allPosts.map((post, index) => {
 						const href = `/blog/${post.data.slug}`;
