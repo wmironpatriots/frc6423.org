@@ -66,6 +66,56 @@ article {
 	overflow: hidden;
 }
 
+.text-img-main {
+	display: flex;
+	flex-direction: column;
+	gap: 3em;
+	font-size: 130%;
+}
+
+.text-img-main h2 {
+	font-size: 200%;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+.text-img-main h5 {
+	margin-top: 0;
+	font-style: italic;
+	font-weight: 550;
+}
+
+.text-img-main .item {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 1.5em;
+	gap: 5em;
+}
+
+.text-img-main .inverted {
+	flex-direction: row-reverse;
+}
+
+.text-img-main .item div {
+	width: 50%;
+}
+
+.text-img-main .image {
+	padding: 0.7em;
+	background: linear-gradient(to bottom left, #a0a0a0 0%, #e1e3e1 100%);
+  box-shadow: 10px 10px #0e6a36;
+}
+
+.text-img-main .inverted .image {
+	background: linear-gradient(to bottom left, #e1e3e1 0%, #a0a0a0 100%);
+	box-shadow: -10px 10px #0e6a36;
+}
+
+.text-img-main img {
+	width: 100%;
+}
+
 footer {
 	padding-top: 1em;
 	text-align: center;
