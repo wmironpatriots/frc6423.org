@@ -18,6 +18,28 @@ const current = "contact";
 				<header>
 					<h1>Contact</h1>
 				</header>
+
+				<section>
+					<div class="text">
+						<div>
+							Ward Melville High School
+							<br/>
+							380 Old Town Road
+							<br/>
+							East Setauket, NY 11733
+							<br/><br/>
+							Email: <a class="link">ironpatriotswm at gmail.com</a>
+							<br/>
+							Instagram: <a href="https://www.instagram.com/frc6423/" class="link">@frc6423</a>
+							<br/>
+							Youtube: <a href="https://www.youtube.com/@IronPatriotsFRC6423" class="link">@IronPatriotsFRC6423</a>
+						</div>
+					</div>
+
+					<div class="image">
+						<img src="src/assets/wmhs.jpg" alt="wmhs"/>
+					</div>
+				</section>
 			</main>
 		</div>
 		<footer>
@@ -25,3 +47,44 @@ const current = "contact";
 		</footer>
 	</article>
 </Base>
+
+<style>
+	section {
+		font-size: 140%;
+		display: flex;
+		flex-direction: row;
+		margin-bottom: 2em;
+	}
+
+	section div {
+		padding: 1em;
+	}
+	section .text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 55%;
+	}
+
+	section .image {
+		width: 45%;
+		padding: 0.7em;
+		background: linear-gradient(to bottom left, #a0a0a0 0%, #e1e3e1 100%);
+  	box-shadow: 10px 10px #0e6a36;
+	}
+
+	section img {
+		width: 100%;
+		min-width: 10em;
+	}
+
+	.link {
+		color: #00a359;
+		text-decoration: underline;
+	}
+
+	.link:hover {
+		cursor: pointer;
+		text-decoration: none;
+	}
+</style>
