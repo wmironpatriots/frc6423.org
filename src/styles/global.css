@@ -54,6 +54,15 @@ article {
 	font-size: 150%;
 }
 
+.page-collection .blog-content a {
+	color: #00a359;
+	transition: 0s;
+}
+
+.page-collection .blog-content a:hover {
+	color: #00a359;
+}
+
 .page-collection nav {
 	display: flex;
 	padding-right: 2em;
