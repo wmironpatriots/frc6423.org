@@ -38,12 +38,20 @@ article {
 	white-space: nowrap;
 }
 
-.page-collection h1 {
+.page-collection header h1 {
 	font-size: 400%;
 }
 
 .page-collection h2 {
 	font-size: 160%;
+}
+
+.page-collection .blog-content h1 {
+	font-size: 200%;
+}
+
+.page-collection .blog-content h2 {
+	font-size: 150%;
 }
 
 .page-collection nav {
