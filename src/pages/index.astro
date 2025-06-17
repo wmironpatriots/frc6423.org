@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import logo from '../assets/logo.png';
 import Base from '../layouts/Base.astro';
 import HomeFooter from '../components/HomeFooter.astro';
 ---
@@ -11,7 +12,7 @@ import HomeFooter from '../components/HomeFooter.astro';
 		</div>
 
 		<div class="home-page__content">
-			<Image class="logo" width="90" height="90" src="src/assets/logo.png" alt="Logo"/>
+			<img class="logo" width="90" height="90" src={logo.src} alt="Logo"/>
 			<div>
 				<header>
 					<div class="home-page__content__header">
