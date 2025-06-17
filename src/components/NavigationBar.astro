@@ -7,7 +7,7 @@ const { current, blog } = Astro.props;
 <!-- SELF-NOTE: navigation bar on home page and other pages will most likely differ -->
 
 <div class="nav">
-  <a class="logo" href="/"><img src={blog === "true" ? "../../assets/logo.png":"../assets/logo.png"} alt="logo" width="80" height="80"/></a>
+  <a class="logo" href="/"><img src={blog === "true" ? "../src/assets/logo.png":"src/assets/logo.png"} alt="logo" width="80" height="80"/></a>
   <a href="/" class={current === "home" ? "selected" : ""}>HOME</a>
   <a href="/about" class={current === "about" ? "selected" : ""}>ABOUT</a>
 	<a href="/updates" class={current === "updates" ? "selected" : ""}>UPDATES</a>
