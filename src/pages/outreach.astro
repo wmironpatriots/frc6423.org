@@ -3,6 +3,12 @@ import Base from '../layouts/Base.astro';
 import Footer from '../components/Footer.astro';
 import NavigationBar from '../components/NavigationBar.astro';
 
+import libraryImg from '../assets/library.jpg';
+import sponsorNightImg from '../assets/sponsornight.jpg';
+import showcaseImg from '../assets/showcase.jpg';
+import stemNightImg from '../assets/stemnight.jpg';
+import summerCampImg from '../assets/summercamp.png';
+
 const title = "Outreach |";
 const current = "outreach";
 ---
@@ -33,7 +39,7 @@ const current = "outreach";
 						</div>
 
 						<div class="image">
-							<img src="src/assets/library.jpg" alt="library"/>
+							<img src={libraryImg.src} alt="library"/>
 						</div>
 					</div>
 
@@ -50,7 +56,7 @@ const current = "outreach";
 						</div>
 
 						<div class="image">
-							<img src="src/assets/sponsornight.jpg" alt="sponsor night"/>
+							<img src={sponsorNightImg.src} alt="sponsor night"/>
 						</div>
 					</div>
 
@@ -67,7 +73,7 @@ const current = "outreach";
 						</div>
 
 						<div class="image">
-							<img src="src/assets/showcase.jpg" alt="showcase"/>
+							<img src={showcaseImg.src} alt="showcase"/>
 						</div>
 					</div>
 
@@ -84,7 +90,7 @@ const current = "outreach";
 						</div>
 
 						<div class="image">
-							<img src="src/assets/stemnight.jpg" alt="stem night"/>
+							<img src={stemNightImg.src} alt="stem night"/>
 						</div>
 					</div>
 
@@ -101,7 +107,7 @@ const current = "outreach";
 						</div>
 
 						<div class="image">
-							<img src="src/assets/summercamp.png" alt="summer camp"/>
+							<img src={summerCampImg.src} alt="summer camp"/>
 						</div>
 					</div>
 				</div>
