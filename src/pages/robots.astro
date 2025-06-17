@@ -3,6 +3,10 @@ import Base from '../layouts/Base.astro';
 import Footer from '../components/Footer.astro';
 import NavigationBar from '../components/NavigationBar.astro';
 
+import cascadeImg from '../assets/cascade.jpg';
+import goatImg from '../assets/decibel.jpg';
+import quincyImg from '../assets/quincy.jpg';
+
 const title = "Robots |";
 const current = "robots";
 ---
@@ -28,7 +32,7 @@ const current = "robots";
 						</div>
 
 						<div class="image"> <!-- add a border box outside -->
-							<img src="src/assets/cascade.jpg" alt="cascade"/>
+							<img src={cascadeImg.src} alt="cascade"/>
 						</div>
 					</div>
 
@@ -40,7 +44,7 @@ const current = "robots";
 						</div>
 
 						<div class="image">
-							<img src="src/assets/decibel.jpg" alt="decibel"/>
+							<img src={goatImg.src} alt="decibel"/>
 						</div>
 					</div>
 
@@ -52,7 +56,7 @@ const current = "robots";
 						</div>
 
 						<div class="image"> 
-							<img src="src/assets/quincy.jpg" alt="quincy"/>
+							<img src={quincyImg.src} alt="quincy"/>
 						</div>
 					</div>
 				</div>
