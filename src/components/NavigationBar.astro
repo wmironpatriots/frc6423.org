@@ -3,21 +3,73 @@ import '../styles/global.css';
 
 import logoImg from '../assets/logo.png';
 
-const { current, blog } = Astro.props;
+interface Props {
+  /**
+  * The page to show as currently selected in the NavBar
+  */
+  current?: string,
+  isHome?: boolean,
+}
+
+interface NavLink {
+  /**
+  * The text that's shown in the NavBar
+  */
+  name: string,
+  /**
+  * The link to the page
+  */
+  href: string,
+  /**
+  * How the page is refered to internally
+  *
+  * If `props.current == id`, the link is shown as selected
+  */
+  id: string,
+};
+
+const { current, isHome } = Astro.props;
+
+const navLinks: NavLink[] = [
+  { name: 'HOME', href: '/', id: 'home' },
+  { name: 'ABOUT', href: '/about', id: 'about' },
+  { name: 'UPDATES', href: '/updates', id: 'updates' },
+  { name: 'SPONSORS', href: '/sponsors', id: 'sponsors' },
+  { name: 'OUTREACH', href: '/outreach', id: 'outreach' },
+  { name: 'ROBOTS', href: '/robots', id: 'robots' },
+  { name: 'CONTACT', href: '/contact', id: 'contact' },
+];
 ---
 
-<!-- SELF-NOTE: navigation bar on home page and other pages will most likely differ -->
+<!-- SELF-NOTE: navigation bar on home page and other pages will most likely differ --> 
 
-<div class="nav">
-  <a class="logo" href="/"><img src={logoImg.src} alt="logo" width="80" height="80"/></a>
-  <a href="/" class={current === "home" ? "selected" : ""}>HOME</a>
-  <a href="/about" class={current === "about" ? "selected" : ""}>ABOUT</a>
-	<a href="/updates" class={current === "updates" ? "selected" : ""}>UPDATES</a>
-	<a href="/sponsors" class={current === "sponsors" ? "selected" : ""}>SPONSORS</a>
-	<a href="/outreach" class={current === "outreach" ? "selected" : ""}>OUTREACH</a>
-	<a href="/robots" class={current === "robots" ? "selected" : ""}>ROBOTS</a>
-	<a href="/contact" class={current === "contact" ? "selected" : ""}>CONTACT</a>
-</div>
+{ 
+  isHome ?
+    <nav>
+			<div class="home-page__content__navigation">
+				{
+          navLinks.map((link) => link.id !== 'home' && (
+            <a href={link.href}> 
+              {link.name}
+            </a>
+          ))
+        }
+			</div>
+		</nav>
+  : 
+    <div class="nav">
+      <a class="logo" href="/">
+        <img src={logoImg.src} alt="logo" width="80" height="80" />
+      </a>
+      {
+        navLinks.map((link) => 
+          <a href={link.href} class={current === link.id ? 'selected' : ''}>
+            {link.name}
+          </a>
+        )
+      }
+  </div>
+}
 
 <style>
   .nav {
@@ -41,4 +93,34 @@ const { current, blog } = Astro.props;
   .selected {
     color: #00a359;
   }
+
+  /*
+	*
+	* Navigation Bar for Homepage
+	*
+	*/
+
+	.home-page__content__navigation {
+		display: flex;
+		justify-content: left;
+		align-items: center;
+		flex-direction: row;
+		column-gap: 5%;
+		padding-left: 7%;
+		margin-top: 7%;
+		flex-wrap: wrap;
+	}
+
+	.home-page__content__navigation a {
+		text-decoration: none;
+		color: #FFF;
+		opacity: 1;
+		transition: 0.4s;
+	}
+
+	.home-page__content__navigation a:hover {
+		opacity: 0.6;
+		cursor: pointer;
+	}
+
 </style>
