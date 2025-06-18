@@ -4,6 +4,19 @@ import logo from '../assets/logo.png';
 import RobotImg from '../assets/HVR-1.png';
 import Base from '../layouts/Base.astro';
 import HomeFooter from '../components/HomeFooter.astro';
+import NavigationBar from '../components/NavigationBar.astro';
+
+
+interface NavLink {
+  /**
+  * The text that's actually shown in the nav
+  */
+  name: string, 
+  /**
+  * The link to the actual page
+  */
+  href: string,
+};
 ---
 
 <Base>
@@ -24,17 +37,7 @@ import HomeFooter from '../components/HomeFooter.astro';
 						<h3>Design. Build. Compete. Inspire.</h3>
 					</div>
 				</header>
-
-				<nav>
-					<div class="home-page__content__navigation">
-						<a href="/about">ABOUT</a>
-						<a href="/updates">UPDATES</a>
-						<a href="/sponsors">SPONSORS</a>
-						<a href="/outreach">OUTREACH</a>
-						<a href="/robots">ROBOTS</a>
-						<a href="/contact">CONTACT</a>
-					</div>
-				</nav>
+        <NavigationBar current = "home" isHome = {true} />
 			</div>
 
 			<footer>
@@ -114,35 +117,6 @@ import HomeFooter from '../components/HomeFooter.astro';
 
 	h3 {
 		margin-top: 0;
-	}
-
-	/*
-	*
-	* Navigation Bar for Homepage
-	*
-	*/
-
-	.home-page__content__navigation {
-		display: flex;
-		justify-content: left;
-		align-items: center;
-		flex-direction: row;
-		column-gap: 5%;
-		padding-left: 7%;
-		margin-top: 7%;
-		flex-wrap: wrap;
-	}
-
-	.home-page__content__navigation a {
-		text-decoration: none;
-		color: #FFF;
-		opacity: 1;
-		transition: 0.4s;
-	}
-
-	.home-page__content__navigation a:hover {
-		opacity: 0.6;
-		cursor: pointer;
 	}
 
 	/*
